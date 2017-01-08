@@ -1,0 +1,338 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage{hyperref,tfrupee,amsmath}
+\usepackage[tablegrid]{vhistory}
+
+\hypersetup{
+	pdftitle={Comparison between cloud and traditional deployment for MIS,
+		NIT Calicut},
+	pdfsubject={Cloud and traditional deployment for MIS, NIT Calicut},
+	pdfauthor={Atul Golchha, Arpan Kapoor, Bobba Praveen, G. V. S. Rahul,
+			Sachin T. Sany},
+	hidelinks
+}
+
+\begin{document}
+\title{Comparison between cloud and traditional deployment for MIS, NIT Calicut}
+\author{Atul Golchha (AG)
+	\\
+	Arpan Kapoor (AK)
+	\\
+	Bobba Praveen (BP)
+	\\
+	G. V. S. Rahul (GVSR)
+	\\
+	Sachin T. Sany (STS)
+	\\ \\
+	BTech, Computer Science \& Engineering (2012--2016)}
+
+
+\maketitle
+
+% Change width ratios for Authors & Description columns in the version history table.
+% When changing the widths, please take care that the widths add up to 2\hsize.
+\renewcommand \vhAuthorColWidth{.8\hsize}
+\renewcommand \vhChangeColWidth{1.2\hsize}
+
+\begin{versionhistory}
+	\vhEntry{1.0}{22.04.15}{AG|AK|BP|GVSR|STS}{Initial version}
+	\vhEntry{1.1}{24.04.15}{Dr. Vinod Pathari}{Updated \emph{Conclusion}}
+\end{versionhistory}
+
+% No need for page number on the first page
+\pagenumbering{gobble}
+
+\newpage
+% Restart page numbering
+\pagenumbering{arabic}
+\tableofcontents
+\newpage
+
+\section{Introduction}
+National Institute of Technology, Calicut (NIT Calicut) is one of the leading
+research and academic institutes in engineering and science disciplines in our
+country. This document compares between a traditional and a cloud deployment
+for a Management Information System (MIS) at NIT Calicut. It is prepared as an
+independent study, with the support of Dr. Vineeth Paleri and Dr. Vinod Pathari,
+reflecting on the booming transition from the traditional software deployment
+model to the cloud model.
+
+Before proceeding with the comparison, we will have a look at the current
+system followed. Then we will describe the characteristics of a traditional and
+cloud deployment. Finally we will compare the two systems for MIS.
+
+\subsection{Current System}
+Currently, we have a management software called Decision Support System (DSS).
+Below are some of the details about DSS, as of April, 2015:
+
+\begin{itemize}
+	\item Purchased in 2004 from \emph{Master Software, Nagpur} for around
+		\rupee 16 lac.
+	\item Used by all students, academic and non-academic staff.
+	\item Supposed to handle usage by around 1500 students, the college
+		strength in 2004. Current strength is 6000.
+	\item Had a warranty period of 3 years. After the warranty, we
+		maintained an AMC with the company till 2011. The contract was
+		canceled in 2011 due to high AMC demanded by the company.
+	\item Since 2011, 1 permanent and 2 ad hoc staff have been appointed for
+		its maintenance.
+	\item Daily backup has to be performed by the staff.
+	\item Current server specification:
+	\begin{itemize}
+		\item 2 servers - 1 database server (Oracle 9i) and 1 web
+			server.
+		\item OS - Windows 2003 Server (32-bit).
+		\item RAM - 16GB (only 4GB usable, as per the staff).
+	\end{itemize}
+	\item Upgrading to Oracle 10g (database) is technically challenging, as
+		per the staff.
+	\item 2 new servers (32GB RAM, 2TB HDD) purchased in 2015 for upgrading
+		the old DSS servers.
+\end{itemize}
+
+\section{Traditional solution}
+\begin{itemize}
+	\item With traditional hosting, the software is deployed on dedicated
+		servers owned by the client.
+	\item As time passes, hardware performance degrades and thus requires
+		upgrades.
+	\item The client pays the software provider for its maintenance.
+	\item Generally, a single unmanaged backup scheme is used.
+	\item Client has to take the burden of hardware maintenance like
+		machines, UPS, network equipments, etc.
+	\item There is limited remote access possibilities with added cost and
+		security issues.
+\end{itemize}
+
+\section{Cloud solution}
+According to the NIST \cite{ref0}, Cloud computing is:
+\begin{quote}
+\emph{a model for enabling ubiquitous, convenient, on-demand network access to
+a shared pool of configurable computing resources (e.g., networks, servers,
+storage, applications, and services) that can be rapidly provisioned and
+released with minimal management effort or service provider interaction.}
+\end{quote}
+
+\noindent
+It identifies five \textbf{essential characteristics} of the cloud model:
+\begin{enumerate}
+	\item On-demand self-service
+	\item Broad network access
+	\item Resource pooling
+	\item Rapid elasticity (scalability)
+	\item Measured service
+\end{enumerate}
+
+\subsection{Classification}
+There are 3 basic cloud computing service models. A very simplified way of
+differentiating these flavors of Cloud Computing is as follows:
+\begin{itemize}
+	\item SaaS applications are designed for end-users, delivered over the
+		web.
+	\item PaaS is the set of tools and services designed to make coding and
+		deploying those applications quick and efficient.
+	\item IaaS is the hardware and software that powers it all -- servers,
+		storage, networks, operating systems.
+\end{itemize}
+
+\subsubsection{Software as a Service}
+With SaaS, a provider licenses an application to customers as a service on
+demand, through a subscription. Some of the defining characteristics of SaaS
+include:
+\begin{itemize}
+	\item Web access to software.
+	\item Software is managed from a central location by the provider.
+	\item Users not required to handle software upgrades and patches.
+	\item The client does not own the hardware and hence no maintenance
+		issues arise.
+\end{itemize}
+Among the most familiar SaaS applications for business are customer
+relationship management applications like Salesforce, productivity software
+suites like Google Apps and Microsoft Office 365, and storage solutions like
+Box and Dropbox.
+
+\subsubsection{Platform as a Service}
+In the PaaS model, cloud providers deliver a computing platform, typically
+including operating system, programming language execution environment,
+database, and web server. Application developers can develop and run their
+software solutions on a cloud platform without the cost and complexity of
+buying and managing the underlying hardware and software.
+
+Examples of PaaS providers include Heroku, Google App Engine, Microsoft Azure
+and Red Hat's OpenShift.
+
+\subsubsection{Infrastructure as a Service}
+IaaS is a way of delivering Cloud Computing infrastructure –- servers, storage,
+network, and operating systems – as an on-demand service. Rather than purchasing
+servers, software, storage space or network equipments as in a traditional
+system, clients instead buy those resources as a fully outsourced service on
+demand.
+\begin{itemize}
+	\item Resources are provided as a service.
+	\item Allows for dynamic scaling.
+	\item Has a variable cost, utility pricing model.
+	\item Generally includes multiple users on a single piece of hardware.
+\end{itemize}
+Some of the popular IaaS providers include Amazon Web Services, Google Compute
+Engine, Rackspace Open Cloud and IBM SmartCloud Enterprise.
+
+\subsection{Data Migration}
+\subsubsection{Entry}
+Cloud providers generally accommodate multiple formats to import client data.
+\subsubsection{Exit}
+To prevent vendor lock down, the client should be able to export his data in a
+non proprietary format like CSV, XML, etc. These constraints should be
+specified in the software requirement specification by the client.
+
+\subsection{Reliability}
+The reliability depends upon the cloud provider. At data centers, generally
+professionals are employed who monitor 24\(\times\)7 and thus guarantee higher
+availability and minimum impact of any failures.
+
+\subsection{Security}
+When an organization elects to store data or host applications on the cloud,
+it loses its ability to have physical access to the servers hosting its
+information. As a result, potentially business sensitive and confidential data
+is at risk from insider attacks.
+
+In order to conserve resources, cut costs, and maintain efficiency, Cloud
+Service Providers often store more than one customer's data on the same server.
+Hence, the data isolation aspect should be kept in mind when choosing the cloud
+provider.
+
+\subsection{Cost}
+Generally, the cloud model has an annually recurring expenditure, which has to
+be clearly stated at the point of choosing the cloud provider.
+
+The current MIS SRS states the requirements at a very high level, thus a
+precise estimate of the cost cannot be made.
+
+\subsection{Adoption in India}
+There are over 8000 companies in India, as of 2015, that are using cloud
+solutions, including large enterprises such as Tata Motors, Reliance
+Entertainment, NDTV, Narayana Health, Macmillan India, EROS International,
+Malayala Manorama and Sony Entertainment \cite{ref6}.
+
+The Government of India's UID (Aadhar) project is entirely based on cloud
+technology \cite{ref7}.
+
+\section{Comparison}
+\subsection{Ownership}
+In a traditional system, the client owns the software and data resides on the
+client's server. When it comes to cloud, there are 3 service models viz. SaaS,
+PaaS and IaaS. In SaaS, client doesn't have the ownership, whereas in PaaS and
+IaaS, there is possibility for the client to have ownership of the software.
+
+In case of client ownership, maintenance can either be outsourced to a company
+or client can hire their own professionals.
+
+In our case, it would be difficult to hire technically knowledgeable
+professionals, so possessing ownership doesn't have any significant advantages.
+In this regard, SaaS is preferred.
+
+\newpage
+\subsection{Comparison Table}
+The following table assumes the SaaS service model for the cloud solution. \\
+\\
+% Increase space between rows
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|p{2.26cm}|p{5cm}|p{5.4cm}|}
+	\hline
+	\textbf{Topic} & \textbf{Traditional} & \textbf{Cloud (SaaS)}
+	\\ \hline
+	Ownership &
+	Client owns &
+	No ownership
+	\\ \hline
+	Data \newline migration &
+	Entry and exit follows \newline standard formats &
+	Possible charge for data \newline export
+	\\ \hline
+	Reliability &
+	24\(\times\)7 monitoring not \newline possible, higher Mean Time To
+		Recovery (MTTR) &
+	24\(\times\)7 monitoring done, lower MTTR
+	\\ \hline
+	Security &
+	Client's responsibility for physical security &
+	Chances of \emph{insider's attack} and \emph{improper data isolation}
+	\\ \hline
+	Manpower &
+	Trained professionals \newline required to run and \newline maintain the
+		system &
+	Requires minimum manpower for administrative purposes
+	\\ \hline
+	Scalability &
+	Not rapidly scalable &
+	Can easily meet higher service requirements at peak times
+	\\ \hline
+	Hardware maintenance &
+	Burden of hardware \newline maintenance &
+	No maintenance
+	\\ \hline
+	Software maintenance &
+	Supporting software may require upgrades &
+	Upgrades are transparent to the client
+	\\ \hline
+	Cost &
+	\multicolumn{2}{c|}{Unable to estimate due to lack of complete SRS}
+	\\ \hline
+\end{tabular}
+
+\newpage
+\section{Conclusion}
+Choosing between cloud and traditional deployment is hard without the complete
+specification for MIS. Ownership of the software is beneficial only if
+professionals can be hired for its maintenance, which is difficult in our case.
+Hence it is recommended that a cloud solution would be better for NITC MIS.
+
+In the cloud deployment options, Software as a Service (SaaS) is the suggested
+choice. The following two points must be studied and well-addressed while opting
+a SaaS model:
+\begin{itemize}
+	\item Data format for possible migration should be specified upfront.
+		The suggested format should be in-line with the industry
+		standards to ensure easy migration as and when NITC chooses to
+		exit from the service provider.
+	\item The service level agreement (SLA) should clearly specify
+		quantifiable parameters for reliability, scalability,
+		maintenance etc. with associated financial implications, where
+		necessary.
+\end{itemize}
+
+\newpage
+\begin{thebibliography}{99}
+\bibitem{ref0}
+	National Institute of Standards and Technology,
+	\emph{The NIST Definition of Cloud Computing,}
+	\url{http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf}
+\bibitem{ref1}
+	Agility Networks,
+	\emph{Cloud Computing vs Traditional Server,}
+	\url{http://agilitynetworks.com/what-is-the-cloud/cloud-computing-versus-traditional-server-installation-pro-and-con.html}
+\bibitem{ref2}
+	Rackspace,
+	\emph{Understanding the Cloud Computing Stack: SaaS, PaaS, IaaS,}
+	\url{http://www.rackspace.com/knowledge_center/whitepaper/understanding-the-cloud-computing-stack-saas-paas-iaas}
+\bibitem{ref3}
+	The Open Group,
+	\emph{Cloud Computing Portability and Interoperability: Cloud
+		Portability and Interoperability,}
+	\url{http://www.opengroup.org/cloud/cloud/cloud_iop/cloud_port.htm}
+\bibitem{ref4}
+	Microsoft Cyber Trust Blog,
+	\emph{Fundamentals of Cloud Service Reliability,}
+	\url{http://blogs.microsoft.com/cybertrust/2012/09/12/fundamentals-of-cloud-service-reliability}
+\bibitem{ref5}
+	Wikipedia,
+	\emph{Cloud computing security,}
+	\url{http://en.wikipedia.org/wiki/Cloud_computing_security}
+\bibitem{ref6}
+	The Economic Times,
+	\emph{Amazon links 8,000 Indian firms to Cloud services,}
+	\url{http://articles.economictimes.indiatimes.com/2014-08-21/news/53072779_1_public-cloud-cloud-market-amazon-cloud}
+\bibitem{ref7}
+	Sudhir Murthy, Manager -- Cloud Services, Wipro India,
+	\emph{Business Impact of Cloud Computing in India,}
+	\url{http://tejas.iimb.ac.in/interviews/39.php}
+\end{thebibliography}
+\end{document}
